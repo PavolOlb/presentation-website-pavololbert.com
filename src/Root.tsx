@@ -3,7 +3,7 @@ import { Articles } from "./components/Articles/Articles";
 import { ChuckNorris } from "./components/ChuckNorris/LogicComponent";
 import { Contact } from "./components/Contact";
 import { CounterApp } from "./components/Counter/CounterIndex";
-import { HackerTyper } from "./components/Hackertyper/HackerTyper";
+import { HackerTyper } from "./components/HackerTyper/HackerTyper";
 import { Link, Route, BrowserRouter as Router, Switch } from "react-router-dom";
 import { MemoryGame } from "./components/MemoryGame/MemoryGame";
 import { MyHeader } from "./components/Header";

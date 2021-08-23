@@ -33,8 +33,7 @@ const LinkToProject = styled(Link)`
   display: inline-block;
   border: 1px solid ${theme.brown};
   padding: 0.5em 1em;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue";
+  font-family: ${theme.generalFont};
   color: ${theme.brown};
   font-weight: 700;
   border-radius: 10%;
@@ -45,9 +44,17 @@ const LinkToProject = styled(Link)`
     color: ${theme.white};
   }
 `;
+const AGit = styled.a`
+  display: block;
+  text-decoration: none;
+  color: ${theme.brown};
+  margin-bottom: 1em;
+  text-align: center;
+  font-weight: ${theme.boldFont};
+  font-family: ${theme.generalFont};
+`;
 const PWithDescription = styled.p`
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue";
+  font-family: ${theme.generalFont};
   margin: 2em auto;
   width: 80%;
 `;
@@ -56,13 +63,19 @@ type Props = {
   header: string;
   description: string;
   urlToProject: string;
+  urlToGithub: string;
 };
 export const OneProject = (props: Props) => {
   return (
     <DivOneProject>
       <H3ProjectHeader>{props.header}</H3ProjectHeader>
       <PWithDescription>{props.description}</PWithDescription>
-      <LinkToProject to={props.urlToProject}>Check The Project</LinkToProject>
+      <AGit href={props.urlToGithub} target="_blank" rel="noreferrer">
+        GitHub Repository
+      </AGit>
+      <LinkToProject to={props.urlToProject}>
+        Preview of the project
+      </LinkToProject>
     </DivOneProject>
   );
 };

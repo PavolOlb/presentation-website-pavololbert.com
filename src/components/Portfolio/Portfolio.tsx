@@ -42,6 +42,7 @@ export const Portfolio = () => {
           return (
             <OneProject
               key={index}
+              urlToGithub={item.GitHubUrl}
               header={item.Title}
               description={item.Description}
               urlToProject={item.UrlToProject}

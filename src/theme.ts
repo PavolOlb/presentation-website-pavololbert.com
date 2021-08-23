@@ -25,6 +25,10 @@ export const theme = {
   mediumFont: 500,
   boldFont: 700,
 
+  //font-styles
+  generalFont: `-apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue"`,
+
   //media-widths
   width1000: "max-width: 1000px",
   width530: "max-width: 530px",
